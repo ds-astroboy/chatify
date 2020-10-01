@@ -1,0 +1,72 @@
+.login{
+    display: grid;
+    place-items: center;
+}
+.brand__name{
+    color: white;
+    font-size: 50px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-stretch: semi-expanded;
+    margin-top: 70px;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+}
+.tagline{
+    color: white;
+    font-size: 27px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-stretch: extra-expanded;
+    font-weight: 100;
+    margin-top: 0px;
+    letter-spacing: 3px;
+}
+
+.login__text{
+    color: white;
+    font-size: 27px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-stretch: extra-expanded;
+    font-weight: 700;
+    margin-top: 70px;
+    
+}
+
+.username__input{
+    background-color: white;
+    padding-top: 18px;
+    padding-left: 30px;
+    padding-bottom: 15px;
+    border-radius: 20px;
+    margin-bottom: 13px;
+    width: 300px;
+    margin-top: 8px;
+}
+
+::placeholder{
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.password__input{
+    background-color: white;
+    padding-top: 18px;
+    padding-left: 30px;
+    padding-bottom: 15px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    width: 300px;
+}
+
+.login__button{
+    padding-top: 13px;
+    padding-bottom: 15px;
+    border-radius: 20px;
+    margin-bottom: 13px;
+    width: 340px;
+    background-color: #59A976;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
