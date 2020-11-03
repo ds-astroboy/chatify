@@ -6,6 +6,11 @@
     background-color: white;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 .sidebarChat:hover {
     background-color: #ebebeb;
 }
