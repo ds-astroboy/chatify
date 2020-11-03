@@ -14,6 +14,7 @@
 .chat_headerInfo{
     flex: 1;
     padding-left: 20px;
+    color: white;
 }
 
 .chat_headerInfo >h3{
@@ -22,7 +23,7 @@
 }
 
 .chat_headerInfo > p{
-    color: gray;
+    color: rgb(204, 201, 201);
 }
 
 .chat_headerRight{
@@ -31,9 +32,13 @@
     min-width: 100px;
 }
 
+.chat_headerRight > .MuiIconButton-root{
+    color: rgb(255 255 255 / 54%);
+}
+
 .chat_body {
     flex: 1;
-    background-color: rgb(66, 104, 173);
+    background-color: white;
     background-repeat: repeat;
     padding: 30px;
     overflow: scroll;
@@ -43,7 +48,7 @@
     position: relative;
     font-size: 16px;
     padding: 10px;
-    background-color: #ffffff;
+    background-color: #c0b5c7;
     border-radius: 40px;
     width: fit-content;
     margin-bottom: 30px;
@@ -51,7 +56,7 @@
 
 .chat_receiver{
     margin-left: auto;
-    background-color: lightgrey;
+    background-color: rgb(201, 222, 250);
 }
 
 .chat_name{
@@ -92,5 +97,5 @@
 
 .chat_footer > .MuiSvgIcon-root{
     padding: 10px;
-    color: gray;
+    color: rgb(255, 254, 254);
 }
