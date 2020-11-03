@@ -4,6 +4,10 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
 function Login() {
+
+    const signIn= () =>{
+
+    }
     return (
         <div className="login">
             <h1 className="brand__name">CHATIFY</h1>
@@ -23,12 +27,12 @@ function Login() {
                 <Form.Group controlId="formGroupPassword">
                     <Form.Control type="password" className="password__input" placeholder="Password" />
                 </Form.Group>
-                <Button type="submit" className="login__button">
+                <Button type="submit" className="login__button" onClick={signIn}>
     LOGIN
   </Button>
             </Form>
 
-
+            
         </div>
     )
 }
