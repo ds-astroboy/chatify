@@ -1,13 +1,32 @@
 import React from 'react'
-import './Login.css'
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
+import {Button} from "@material-ui/core"
+import "./Login.css"
+import {auth,provider} from '../firebase'
+import { useStateValue } from '../StateProvider'
+import {actionTypes} from '../reducer'
 
 function Login() {
 
-    const signIn= () =>{
+    const [{}, dispatch]= useStateValue();
 
-    }
+    const signIn=()=>{
+        auth.signInWithPopup(provider)
+        .then(result=>{
+            console.log(result.user);
+            dispatch({
+                type:actionTypes.SET_USER,
+                user:result.user,
+            });
+            dispatch({
+                type:actionTypes.SET_SESSION,
+                uid:result.user.uid,
+                displayName:result.user.displayName,
+                photoURL:result.user.photoURL
+            })
+        })
+        .catch((err)=>alert(err.message));
+        
+    };
     return (
         <div className="login">
             <h1 className="brand__name">CHATIFY</h1>
@@ -15,22 +34,12 @@ function Login() {
             <hr 
                 style={{
                     color: "white",
-                    width: "55px"
+                    width: "55px",
+                    marginBottom: "80px"
                 }}
             />
-            {/* Img */}
-            <h1 className="login__text">MEMBER LOGIN</h1>
-            <Form>
-                <Form.Group controlId="formGroupUsername">
-                    <Form.Control type="text" placeholder="User Name" className="username__input"/>
-                </Form.Group>
-                <Form.Group controlId="formGroupPassword">
-                    <Form.Control type="password" className="password__input" placeholder="Password" />
-                </Form.Group>
-                <Button type="submit" className="login__button" onClick={signIn}>
-    LOGIN
-  </Button>
-            </Form>
+            <Button type="submit" className="login__button" onClick={signIn}> Sign In using Google </Button>
+            
 
             
         </div>
