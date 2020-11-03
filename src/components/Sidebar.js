@@ -27,7 +27,7 @@ function Sidebar() {
     return(
         <div className="sidebar">
          <div className="sidebar_header">
-         <Avatar src={user?.photoURL}/>
+         <Avatar src={user?.photoURL} className="avatar"/>
          <div className="sidebar_headerRight">
              <IconButton>
              <DonutLargeIcon />

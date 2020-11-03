@@ -29,6 +29,7 @@ function Login() {
     };
     return (
         <div className="login">
+            <div className="container__box">
             <h1 className="brand__name">CHATIFY</h1>
             <h1 className="tagline">Think Less, Chat More.</h1>
             <hr 
@@ -41,7 +42,7 @@ function Login() {
             <Button type="submit" className="login__button" onClick={signIn}> Sign In using Google </Button>
             
 
-            
+            </div>
         </div>
     )
 }

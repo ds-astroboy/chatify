@@ -11,12 +11,19 @@ a{
     color: black;
 }
 
+.add__chat{
+    font-size: 21px;
+    font-weight: 650;
+    letter-spacing: 1px;
+}
+
 .sidebarChat:hover {
     background-color: #ebebeb;
 }
 
 .sidebarChat_info > h2{
-    font-size: 16px;
+    font-size: 17px;
+    font-weight: 650;
     margin-bottom: 8px;
 }
 
