@@ -4,7 +4,7 @@ First off, thank you for contributing to **Chatify**! Your help and talents are 
 
 ### Opening a new issue
 
-If you find a bug or think of an improvement or fix, please open a [new issue](https://github.com/Anurag5086/chatify/issues/new). Include every step necessary to reproduce the bug. Include screenshots and code examples where applicable. The more thorough you are, the better.
+If you find a bug or think of an improvement or fix, please open a [new issue](https://github.com/Anurag5086/chatify/issues/new). Outline every step necessary to reproduce the bug. Include screenshots and code examples where applicable. The more thorough you are, the better.
 
 ### Working on an issue
 
