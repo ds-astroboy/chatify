@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, setState } from 'react';
 import { Avatar, IconButton } from "@material-ui/core";
 import "./Chat.css";
 import { AttachFile, SearchOutlined } from '@material-ui/icons';
@@ -9,6 +9,7 @@ import {useParams} from 'react-router-dom';
 import db from '../firebase';
 import firebase from "firebase";
 import { useStateValue } from '../StateProvider';
+import Picker from 'emoji-picker-react';
 
 function Chat() {
     const [input, setInput]=useState("");
@@ -17,13 +18,14 @@ function Chat() {
     const [roomName, setRoomName] =useState("");
     const [messages, setMessages]= useState([]);
     const [ { user }, dispatch ] =useStateValue();
+    const [chosenEmoji, setChosenEmoji] = useState(null);
 
     useEffect( ()=> {
      if(roomId){
          db.collection("rooms").doc(roomId).onSnapshot( snapshot => (
              setRoomName(snapshot.data().name)
          ))
-         db.collection('rooms').doc(roomId).collection("messages").orderBy('timestamp', 'asc').onSnapshot( snapshot =>(
+         db.collection('rooms').doc(roomId).collection("messages").orderBy('timestamp', 'desc').onSnapshot( snapshot =>(
              setMessages(snapshot.docs.map((doc) => doc.data())))
          );
      }
@@ -43,7 +45,17 @@ function Chat() {
         });
 
         setInput("");
+    };/*
+    const onEmojiClick = (event, emojiObject) => {
+        setChosenEmoji(emojiObject);
     };
+    const addEmoji = (e) => {
+        let emoji = setChosenEmoji(e);
+        this.setState({
+          message: this.state.message + emoji
+        });
+    };*/
+    
 
     return (
         <div className="chat">
@@ -76,10 +88,12 @@ function Chat() {
                     <span className="chat_timestamp">{new Date(message.timestamp?.toDate
                     ()).toUTCString()}</span>
                 </p>
-                ))}
+                ))}  
             
             </div>
             <div className="chat_footer">
+            {/*<Picker onEmojiClick={addEmoji} />*/}
+            
                  <InsertEmoticonIcon />
               <form>
                   <input value={input} onChange={ (e) => setInput(e.target.value)} type="text" placeholder="Type a message" />
