@@ -16,4 +16,4 @@ This project uses 2 spaces for indentation. Stay consistent with the existing st
 
 ### License
 
-All contributions are made under the **MIT Software License**. See the bottom of the [README](https://github.com/dgabriel123/chatify/blob/master/README.md) for further details.
+All contributions are made under the **MIT Software License**. See the bottom of the [README](https://github.com/Anurag5086/chatify/blob/master/README.md) for further details.
